@@ -16,6 +16,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: 'Loopsy',
   description: 'Reel App',
+  icons: {
+    icon: '/loopsy.png',
+  },
 };
 
 export default function RootLayout({
