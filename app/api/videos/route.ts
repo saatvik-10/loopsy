@@ -17,7 +17,7 @@ export async function GET() {
     return NextResponse.json(videos, { status: 200 });
   } catch (err) {
     return NextResponse.json(
-      { err: 'Failed to fetch videos' },
+      { error: 'Failed to fetch videos', err },
       { status: 500 }
     );
   }
@@ -62,7 +62,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json(newVideo, { status: 201 });
   } catch (err) {
     return NextResponse.json(
-      { err: 'Failed to create new video' },
+      { error: 'Failed to create new video', err },
       { status: 500 }
     );
   }

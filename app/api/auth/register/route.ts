@@ -31,7 +31,7 @@ export async function POST(req: NextRequest) {
     );
   } catch (err) {
     return NextResponse.json(
-      { error: 'Failed to create a User' },
+      { error: 'Failed to create a User' , err},
       { status: 500 }
     );
   }

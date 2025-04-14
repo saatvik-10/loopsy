@@ -13,7 +13,7 @@ export async function GET() {
     return NextResponse.json(authParameters);
   } catch (err) {
     return NextResponse.json(
-      { error: 'ImageKit auth failed' },
+      { error: 'ImageKit auth failed', err },
       { status: 500 }
     );
   }

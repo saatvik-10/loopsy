@@ -73,11 +73,11 @@ export default function VideoUploadForm() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className='space-y-6'>
-      <div className='form-control'>
+      <div className='flex flex-col form-control w-full'>
         <label className='label'>Title</label>
         <input
           type='text'
-          className={`input input-bordered ${
+          className={`input input-bordered w-full ${
             errors.title ? 'input-error' : ''
           }`}
           {...register('title', { required: 'Title is required' })}
@@ -89,10 +89,10 @@ export default function VideoUploadForm() {
         )}
       </div>
 
-      <div className='form-control'>
+      <div className='flex flex-col form-control'>
         <label className='label'>Description</label>
         <textarea
-          className={`textarea textarea-bordered h-24 ${
+          className={`textarea textarea-bordered h-24 w-full ${
             errors.description ? 'textarea-error' : ''
           }`}
           {...register('description', { required: 'Description is required' })}
@@ -104,7 +104,7 @@ export default function VideoUploadForm() {
         )}
       </div>
 
-      <div className='form-control'>
+      <div className='flex flex-col form-control'>
         <label className='label'>Upload Video</label>
         <FileUpload
           fileType='video'
@@ -124,7 +124,7 @@ export default function VideoUploadForm() {
       <button
         type='submit'
         className='btn btn-primary btn-block'
-        disabled={loading || !uploadProgress}
+        // disabled={loading || !uploadProgress}
       >
         {loading ? (
           <>

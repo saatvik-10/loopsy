@@ -31,6 +31,7 @@ export async function dbConnect() {
   try {
     cached.conn = await cached.promise;
   } catch (err) {
+    console.log(err)
     cached.promise = null;
     throw new Error('Database connection failed');
   }
