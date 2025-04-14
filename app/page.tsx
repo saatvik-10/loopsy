@@ -4,7 +4,6 @@ import React, { useEffect, useState } from 'react';
 import VideoFeed from '@/app/components/VIdeoFeed';
 import { IVideo } from '@/models/Video';
 import { apiClient } from '@/lib/api-client';
-import { PlusIcon } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Home() {
